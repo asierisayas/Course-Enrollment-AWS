@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Students App</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+    form {
+        width: 50%;
+        margin: 0 auto;
+        border-width: 1px;
+        border-color: #000000;
+    }
+</style>
+
+<body>
+    <center>
+        <h1>Update Student Information</h1>
+    <br>
+    <h4><a href="/">View Students</a> | <a href="/student/add">Add Student</a> | <a href="/courses">View Courses</a> | <a href="/course/add">Add Course</a> | <a href="/department/add">Add Department</a> | <a href="/instructor/add">Add Instructor</a></h4>
+    </center>
+
+    <br>
+    
+<form action="/student/update/{{student.sID}}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" value = "{{ student.Name }}" name="Name">
+        </div>
+
+        <div class="form-group">
+            <label>Major</label>
+            <input type="text" class="form-control" value = "{{ student.Major }}" name="Major">
+        </div>
+
+        <div class="form-group">
+            <label>GPA</label>
+            <input type="text" class="form-control" value = "{{ student.GPA }}" name="GPA">
+        </div>
+        <button type="submit" id="btnsubmit" class="btn btn-default">Submit</button>
+</form>
+
+</body>
+
+</html>
