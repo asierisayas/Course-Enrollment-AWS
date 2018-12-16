@@ -5,7 +5,7 @@ import pymysql
 
 rds_host = "schooldb.cmgqdpk2xfxi.us-east-2.rds.amazonaws.com"
 username = "aisayas3"
-password = "asmara95"
+password = "" //Removed password
 db_name = "schoolDB"
 
 def getStudents(event, context):
